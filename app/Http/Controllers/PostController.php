@@ -15,8 +15,8 @@ class PostController extends Controller
 
     public function index()
     {
-
-        return view('dashboard');
+        $categories = Post::select('id','title')->get();
+        return response()->json($categories);
     }
     public function createPost(Request $request)
     {
