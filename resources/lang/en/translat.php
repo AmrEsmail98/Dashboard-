@@ -1,8 +1,11 @@
 <?php
 
 return [
-
+"Category"=>'Category',
  "Creat Category"=>'Creat Category',
+ "Creat New Category"=>'Creat New Category',
+ "cancel"=>'cancel',
+ "Add"=>'Add',
  "Edit"=>'Edit',
  "Delete"=>'Delete',
  "Dashboard"=> 'Dashboard',

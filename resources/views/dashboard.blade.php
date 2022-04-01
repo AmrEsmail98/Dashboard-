@@ -43,7 +43,7 @@
                   <thead class="bg-gray-50 dark:bg-gray-600 dark:text-gray-200">
                     <tr>
                       <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-200 uppercase tracking-wider">{{__('translat.Id')}}</th>
-                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-200 uppercase tracking-wider">{{__('translat.Title')}}</th>
+                      <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-200 uppercase tracking-wider">{{__('translat.Category')}}</th>
                 @role('admin')
                   <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-200 uppercase tracking-wider">{{__('translat.Process')}}</th> @endrole
                     </tr>
@@ -52,8 +52,8 @@
                     <tr></tr>
                     @foreach (App\Models\Post::all() as $post )
                     <tr>
-                    <td class="px-6 py-4 whitespace-nowrap">{{$post->id}}</td>
-                      <td class="px-6 py-4 whitespace-nowrap">{{$post->title}}</td>
+                        <td  class="px-6 py-4 whitespace-nowrap">{{$loop->iteration}}</td>
+                        <td class="px-6 py-4 whitespace-nowrap">{{$post->title}}</td>
                       <td class="px-6 py-4 whitespace-nowrap">
                         @role('admin')
                         <a href="/edit-post/{{$post->id}}" class="m-2 p-2 bg-blue-400 rounded">{{__('translat.Edit')}}</a>

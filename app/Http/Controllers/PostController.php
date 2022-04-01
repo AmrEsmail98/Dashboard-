@@ -9,15 +9,27 @@ class PostController extends Controller
 {
     public function addPost()
     {
+
         return view('add');
+    }
+
+    public function index()
+    {
+
+        return view('dashboard');
     }
     public function createPost(Request $request)
     {
         $post = new Post();
+        $request->validate([
+            'title' => 'required|regex:/^[a-zA-Z]+$/u|max:100|nullable'
+        ]);
         $post->title = $request->title;
         $post->save();
         return back()->with('post_created', 'Post has been Created');
     }
+
+
     public function deletepost($id)
     {
         Post::where('id', $id)->delete();

@@ -1,8 +1,10 @@
 <?php
 
 return [
+    "Category"=>'الاقسام',
+    "The title field is required"=>'ت',
 
- "Creat Category"=>'اضافة طلب',
+ "Creat Category"=>'اضافة قسم',
  "Edit"=>'تعديل',
  "Delete"=>'حذف',
  "Dashboard"=> 'لوحة التحكم',
